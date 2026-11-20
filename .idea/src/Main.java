@@ -26,7 +26,13 @@ class UnitTest {
     }
 
     public int totalCorrect(){
-
+        int count = 0;
+        for(int i = 0; i < answerKey.length; i++){
+            if(studentAns[i].equals(answerKey[i])){
+                count++;
+            }
+        }
+        return count;
     }
 
     public int totalMistakes(){
