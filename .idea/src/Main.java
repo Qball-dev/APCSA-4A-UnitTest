@@ -10,8 +10,8 @@ public class Main {
 
 // write your UnitTest class here (omit the word public on the class line)
 class UnitTest {
-    public String[20] studentAns;
-    public String[20] answerKey;
+    public String[] studentAns;
+    public String[] answerKey;
 
     public UnitTest(String[] studentInput){
         for(int i = 0; i < studentInput.length; i++){
@@ -37,6 +37,10 @@ class UnitTest {
 
     public int totalMistakes(){
 
+    }
+
+    public boolean isPassing(){
+        return totalCorrect() >= 14;
     }
 
 }
