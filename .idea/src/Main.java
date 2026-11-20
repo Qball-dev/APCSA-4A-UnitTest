@@ -50,6 +50,11 @@ class UnitTest {
     }
 
     public String toString() {
-        return "";
+        String result = "";
+        for(int i = 0; i < answerKey.length; i++){
+            result += (i + 1) + ") " + answerKey[i] + "\t\t\t" + (i + 1) + ") " + studentAns[i] + "\n";
+        }
+        return
+                "ANSWER KEY\tSTUDENT'S ANSWERS \n" + result;
     }
 }
