@@ -5,6 +5,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
 
+        String[] answerArray = new String[20];
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("INPUT STUDENT'S ANSWERS");
+        for(int i = 0; i < 20 ; i++){
+            System.out.print(i + ": ");
+            String ans = input.nextLine();
+            answerArray[i] = ans;
+        }
+
+        UnitTest test = new UnitTest(answerArray);
+
+        System.out.println(test.toString());
+        System.out.println("Number of Correct Answers: " + test.totalCorrect());
+        System.out.println("Number of Incorrect Answers: " + test.totalMistakes());
+
+        if(test.isPassing()){
+            System.out.println("The student PASSED");
+        }
+        else{
+            System.out.println("The student FAILED");
+        }
+
     }
 }
 
