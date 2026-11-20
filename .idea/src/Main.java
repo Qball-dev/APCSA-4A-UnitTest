@@ -49,4 +49,7 @@ class UnitTest {
         return totalCorrect() >= 14;
     }
 
+    public String toString() {
+        return "";
+    }
 }
