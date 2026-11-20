@@ -13,12 +13,18 @@ class UnitTest {
     public String[] studentAns;
     public String[] answerKey;
 
-    public UnitTest(String[] studentInput){
+    public UnitTest(String[] studentInput) throws IOException{
         for(int i = 0; i < studentInput.length; i++){
             this.studentAns[i] = studentInput[i].toUpperCase();
         }
 
-
+        File key = new File("answerKey.txt");
+        Scanner reader = new Scanner(key);
+        int i = 0;
+        while(reader.hasNextLine()) {
+            this.answerKey[i] = reader.nextLine();
+            i++;
+        }
     }
 
     public String[] getStudentAnswers(){
