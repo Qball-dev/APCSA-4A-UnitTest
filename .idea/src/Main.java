@@ -9,3 +9,7 @@ public class Main {
 }
 
 // write your UnitTest class here (omit the word public on the class line)
+class UnitTest {
+    private String[] studentAns;
+    private String[] answerKey;
+}
