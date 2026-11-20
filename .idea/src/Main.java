@@ -36,7 +36,7 @@ class UnitTest {
     }
 
     public int totalMistakes(){
-
+        return 20 - totalCorrect();
     }
 
     public boolean isPassing(){
